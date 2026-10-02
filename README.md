@@ -1,7 +1,4 @@
-// اسم الملف في الريبو: code.js
-// شغله: node code.js
-// هيطلع كود 8 أرقام
-
+// اسم الملف: code.js
 const { default: makeWASocket, useMultiFileAuthState } = require('@whiskeysockets/baileys')
 const P = require('pino')
 const readline = require('readline')
@@ -28,7 +25,7 @@ async function start() {
       let code = await sock.requestPairingCode(num)
       code = code.match(/.{1,4}/g).join('-')
       console.log('\n╔════════════════════╗')
-      console.log(`║ كودك: ${code}     ║`)
+      console.log(`║ METEORSMD: ${code}     ║`)
       console.log('╚════════════════════╝')
       console.log('\nواتساب > الأجهزة المرتبطة > ربط برقم هاتف > اكتب الكود')
     } catch(e){ console.log('خطأ', e.message) }
